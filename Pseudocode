@@ -1,1 +1,11 @@
-
+FUNCTION LinearSearch(item:INTEGER, arr: ARRAY[1:10] OF INTEGER) RETURNS INTEGER
+	FOR i <- 1 TO 10 
+		IF arr[i] = item
+			THEN
+				OUTPUT "Item found"
+				RETURN i
+		ENDIF
+	NEXT i
+	OUTPUT "Item not found"
+	RETURN -1
+ENDFUNCTION	
