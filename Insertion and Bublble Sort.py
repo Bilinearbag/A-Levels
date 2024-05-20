@@ -1,11 +1,11 @@
 def insertionsort():
     global Data
     arraysize = len(Data)
-    for pointer in range(arraysize):
+    for pointer in range(1,arraysize):
         valtoinsert = Data[pointer]
         position = pointer
 
-        while (position>1) and (Data[position-1]>valtoinsert):
+        while (position>0) and (Data[position-1]>valtoinsert):
             Data[position] = Data[position-1]
             position -= 1
         Data[position] = valtoinsert
