@@ -41,10 +41,11 @@ def circenqueue(): #CIRCULAR QUEUE
     if NumElements>=len(Data):
         print("Queue is full")
     else:
-        end += 1
-        if end > len(Data)-1:
-            end = 0
         Data[end] = val
+        if end == len(Data)-1:
+            end = 0
+        else:
+            end+=1
         NumElements+=1
 
 def circdequeue(): #CIRCULAR QUEUE 
@@ -52,10 +53,9 @@ def circdequeue(): #CIRCULAR QUEUE
     if NumElements==0:
         print("Queue is empty")
     else:
-        if front == len(Data)-1:
+        front+=1
+        if front > len(Data)-1:
             front = 0
-        else:
-            front +=1
         NumElements-=1
 
 
