@@ -38,7 +38,7 @@ def dequeue(array,fp,ep):
 def circenqueue(): #CIRCULAR QUEUE
     global Data, front, end, NumElements
     val=int(input("Enter a value: "))
-    if NumElements>=len(Data):
+    if NumElements==len(Data):
         print("Queue is full")
     else:
         Data[end] = val
@@ -53,9 +53,10 @@ def circdequeue(): #CIRCULAR QUEUE
     if NumElements==0:
         print("Queue is empty")
     else:
-        front+=1
-        if front > len(Data)-1:
+        if front == len(Data)-1:
             front = 0
+        else:
+            front+=1
         NumElements-=1
 
 
