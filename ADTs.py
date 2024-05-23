@@ -4,16 +4,16 @@ def push(array,tp):
         print("Stack is full.")
     else:
         val=int(input("Enter a value: "))
+        array[tp] = val
         tp=tp+1
-        array[tp]=val
     return array,tp
 
 def pop(array,tp,rp):
     if tp==rp:
         print("Stack is empty")
     else:
-        array[tp]=""
         tp=tp-1
+        array[tp]=""
     return array,tp
 
 
