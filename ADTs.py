@@ -19,7 +19,7 @@ def pop(array,tp,rp):
 
 #QUEUE (FRIST IN FIRST OUT - First item added is the first item removed from the queue)
 def enqueue(array,fp,ep):
-    if ep>=(len(array)-1):
+    if ep>(len(array)-1):
         print("Queue is full.")
     else:
         val=int(input("Enter a value: "))
